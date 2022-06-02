@@ -4,7 +4,21 @@ import HomeView from '../views/HomeView.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
+const routes = [{
+    path: '/tabbar',
+    name: 'tabbar',
+    component: () => import('../test/Tabbar.vue'),
+  },
+  {
+    path: '/navbar',
+    name: 'navbar',
+    component: () => import('../test/Navbar.vue'),
+  },
+  {
+    path: '/van-register',
+    name: 'van-register',
+    component: () => import('../test/vantregiste.vue'),
+  },
   {
     path: '/login',
     name: 'login',
@@ -36,7 +50,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import( /* webpackChunkName: "about" */ '../views/AboutView.vue')
   }
 ]
 
